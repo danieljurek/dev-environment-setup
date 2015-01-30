@@ -25,7 +25,10 @@ then
     fi
 fi
 
-
+wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
+tar -xvf phantomjs-1.9.8-linux-x86_64.tar.bz2
+sudo cp phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/bin/
+rm -rf phantomjs-1.9.8-linux-x86_64 phantomjs-1.9.8-linux-x86_64.tar.bz2
 
 
 echo "INSTALLING RUBY AND RAILS"
