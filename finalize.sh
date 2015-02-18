@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt-get install ruby-dev
+sudo apt-get -y install ruby-dev
