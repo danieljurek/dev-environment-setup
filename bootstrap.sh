@@ -18,11 +18,6 @@ then
     echo "FLUSH PRIVILEGES" | mysql -u root --password=root
 
     touch /var/log/databasesetup
-
-    if [ -f /vagrant/data/initial.sql ];
-    then
-        mysql -uroot -prootpass wordpress < /vagrant/data/initial.sql
-    fi
 fi
 
 wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
@@ -36,3 +31,4 @@ echo "INSTALLING RUBY AND RAILS"
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 
 # The other scripts will install the rest of Ruby and Rails.. 
+

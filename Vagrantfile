@@ -17,9 +17,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 3000, host: 3000
   config.vm.network :forwarded_port, guest: 3306, host: 3307 
 
+  # TODO: Add Postgres forwarding here 
+
   config.vm.provision :shell, path: "bootstrap.sh"
 
+  # TODO: Wrap these up into bootstrap.sh 
   config.vm.provision :shell, :path => "install-rvm.sh",  :args => "stable"
   config.vm.provision :shell, :path => "install-ruby.sh", :args => "1.9.3"
   config.vm.provision :shell, :path => "install-ruby.sh", :args => "2.0.0 rails haml"
+
+  # TODO: Wrap this up into bootstrap.sh 
+  config.vm.provision :shell, :path => "finalize.sh" 
 end
+
